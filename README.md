@@ -7,6 +7,7 @@ This project is complex enough and incorporates a variety of data points: Google
 
 # Running
 
+*To see online - demo https://yuchen0815.github.io/map/
 * To see locally - clone the "Neighborhood Map" project from GitHub and run Index.html file
 
 # Acknowledgments
