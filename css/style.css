@@ -1,0 +1,152 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.row {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.options-list {
+    height: 100%;
+    line-height: 20px;
+    padding: 10px 10px 30px 5px;
+    text-align: left;
+    width: 340px;
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+.title-size {
+    color: #525454;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.line-separator {
+    background: #D0D7D9;
+    height: 2px;
+    margin: 10px 0 10px 0;
+    border: none;
+}
+
+.form-group label, .form-group input {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.bold-label {
+  font-weight: bold;
+}
+
+#search-input {
+  width: 65%;
+  margin: 5px;
+}
+
+.places-list {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+.places {
+  margin: 5px 0 5px 5px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.places:hover {
+  background-color: #54cc67;
+}
+
+.mapContainer {
+  height: 100%;
+  left: 370px;
+  flex-wrap: wrap;
+}
+
+#map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.name, .address, .foursquareInfo {
+  font-family: "Helvetica-neue", sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.info {
+  font-weight: normal;
+}
+
+
+/* MEDIA QUERY - TABLET DEVICES */
+@media (min-width: 480px) and (max-width: 768px) {
+
+  .options-list {
+    padding: 5px 5px 0 5px;
+  }
+
+  .title-size {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+  }
+
+  .line-separator {
+    margin: 5px 0 5px 0;
+  }
+
+  .form-group label, .form-group input {
+    font-size: 12px;
+  }
+
+  #search-input {
+    margin: 2px ;
+  }
+
+  .places {
+    font-size: 12px;
+  }
+}
+
+
+/* MEDIA QUERY - MOBILE DEVICES */
+@media screen and (max-width: 480px) {
+
+  .options-list {
+    padding: 2px 2px 0 2px
+  }
+
+  .title-size {
+    font-size: 14px;
+    margin: 0 0 2px 0;
+  }
+
+  .form-group label, .form-group input {
+    font-size: 10px;
+  }
+
+  #search-input {
+    width: 40%;
+  }
+
+  .places {
+    font-size: 10px;
+  }
+}

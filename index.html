@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
+
+    <!-- This sets the viewport to make it device pixels independent. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title of the app. -->
+    <title>YuchenLiu-Udacity-Map</title>
+    <meta name="Neighborhood Map Project" content="Top 5 Maui (Hawaii) Beaches">
+
+    <!-- These loads the page styles. -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="row">
+          <div class="options-list col-xs-4 col-sm-4 col-md-4 col-lg-">
+            <h1 class="title-size">Best Maui Beaches</h1>
+            <hr class="line-separator">
+
+            <!-- div container with label and input for user input-->
+            <div class="form-group">
+              <label for="search-input" class="bold-label">Filter by: </label>
+              <input type="search" id="search-input" placeholder="location name" data-bind="textInput: userFilterInput">
+            </div>
+
+            <!-- List with biding via Knockout framework-->
+            <ul class="places-list" data-bind="foreach: listLocations">
+              <p class="places" data-bind="text: title, click: $parent.clickedLocationOnMap,  visible: isShown"></p>
+            </ul>
+          </div>
+
+          <!-- Google Maps Placeholder-->
+          <div class="mapContainer">
+            <div id="map" class="map"></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- JQuery library-->
+    <script src='js/jquery-3.1.0.min.js'></script>
+
+    <!-- Knockout library-->
+    <script src='js/knockout-3.4.0.js'></script>
+
+    <!-- Local JavaScript "app.js" file -->
+    <script src="js/app.js"></script>
+
+    <!-- GOOGLE MAPS API - Loaded ASYNCHRONOUSLY -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-479BTrTFcBslEWvgHhiGfY7wd0kZWZo&v=3&callback=initMap" onerror="googleMapError()"></script>
+
+  </body>
+</html>
